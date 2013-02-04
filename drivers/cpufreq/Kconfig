@@ -154,20 +154,6 @@ config CPU_FREQ_DEFAULT_GOV_MINMAX
   	help
     	  Use the CPUFreq governor 'minmax' as default.
 
-config CPU_FREQ_DEFAULT_GOV_AGGRESSIVE
-	bool "aggressive"
-	select CPU_FREQ_GOV_AGGRESSIVE
-	help
-	A modified conservative governor.
-        This features earlysuspend, hotplugging,
-        and tweaks to make it more aggressive.
-
-config CPU_FREQ_DEFAULT_GOV_LIONHEART
-	bool "lionheart"
-	select CPU_FREQ_GOV_LIONHEART
-	help
-	  Use the CPUFreq governor 'Lionheart' as default.
-
 config CPU_FREQ_DEFAULT_GOV_LAGFREE
 	bool "lagfree"
 	select CPU_FREQ_GOV_LAGFREE
@@ -186,13 +172,6 @@ config CPU_FREQ_DEFAULT_GOV_SAVAGEDZEN
 	select CPU_FREQ_GOV_PERFORMANCE
   	help
     	  Use the CPUFreq governor 'savaged-zen' as default.
-
-config CPU_FREQ_DEFAULT_GOV_BRAZILIANWAX
-	  bool "brazilianwax"
-	  select CPU_FREQ_GOV_BRAZILIANWAX
-	  select CPU_FREQ_GOV_PERFORMANCE
-	  help
-	    Use the CPUFreq governor 'brazilianwax as default.
 
 config CPU_FREQ_DEFAULT_GOV_SMARTASS2
 	  bool "smartass2"
