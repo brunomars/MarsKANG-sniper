@@ -135,12 +135,6 @@ config CPU_FREQ_GOV_PERFORMANCE
 
 	  If in doubt, say Y.
 
-config CPU_FREQ_GOV_BRAZILIANWAX
-	  tristate "'brazilianwax' cpufreq governor"
-	  depends on CPU_FREQ
-	  help
-	    'brazilianwax' - a "slightly more agressive smart" optimized
-
 config CPU_FREQ_GOV_SAVAGEDZEN
 	tristate "'savagedzen' cpufreq governor"
 	depends on CPU_FREQ
@@ -148,12 +142,6 @@ config CPU_FREQ_GOV_SAVAGEDZEN
 	  'SavagedZen' - a "smartass" based governor
 
 	  If in doubt, say N.
-
-config CPU_FREQ_GOV_LIONHEART
-	tristate "'Lionheart' cpufreq governor"
-	depends on CPU_FREQ
-	help
-	  'Lionheart' - A brave and agile conservative-based governor.
 
 config CPU_FREQ_GOV_POWERSAVE
 	tristate "'powersave' governor"
@@ -165,13 +153,6 @@ config CPU_FREQ_GOV_POWERSAVE
 	  module will be called cpufreq_powersave.
 
 	  If in doubt, say Y.
-
-config CPU_FREQ_GOV_AGGRESSIVE
-	tristate "'aggressive' governor"
-  depends on CPU_FREQ
-	help
-	  'aggressive' - this governor is a modified conservative.
-	   If in doubt, say N.
 
 config CPU_FREQ_GOV_USERSPACE
 	tristate "'userspace' governor for userspace frequency scaling"
