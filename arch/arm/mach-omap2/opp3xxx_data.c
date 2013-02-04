@@ -100,7 +100,6 @@ struct omap_volt_data omap36xx_vddmpu_volt_data[] = {
 	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP100_UV, 100000, OMAP3630_CONTROL_FUSE_OPP100_VDD1, 0xf9, 0x16, OMAP_ABB_NOMINAL_OPP),
 	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP120_UV, 100000, OMAP3630_CONTROL_FUSE_OPP120_VDD1, 0xfa, 0x23, OMAP_ABB_NOMINAL_OPP),
 	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP1G_UV, 100000, OMAP3630_CONTROL_FUSE_OPP1G_VDD1, 0xfa, 0x27, OMAP_ABB_FAST_OPP),
-        VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP1_2G_UV, 100000, OMAP3630_CONTROL_FUSE_OPP1_2G_VDD1, 0xfa, 0x29, OMAP_ABB_FAST_OPP),
 	// LGE_MOD_E 20121117 subum.choi@lge.com		// MPU H/W Reset patch from deepak
 	VOLT_DATA_DEFINE(0, 0, 0, 0, 0, 0),
 };
@@ -170,7 +169,7 @@ static struct omap_opp_def __initdata omap36xx_opp_def_list[] = {
 	OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,
 				1000000000, OMAP3630_VDD_MPU_OPP1G_UV),
         OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,
-                                1100000000, OMAP3630_VDD_MPU_OPP1_2G_UV),
+                                1100000000, OMAP3630_VDD_MPU_OPP1G_UV),
 
 /* S[, 2012.07.02, mannsik.chung@lge.com, Boost L3 clock. (TI patch by deepak.muddegowda@sasken.com) */
 #if 0
