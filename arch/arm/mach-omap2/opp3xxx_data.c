@@ -98,10 +98,14 @@ struct omap_volt_data omap36xx_vddmpu_volt_data[] = {
         VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP1G_UV, 0, OMAP3630_CONTROL_FUSE_OPP1G_VDD1, 0xfa, 0x27, OMAP_ABB_FAST_OPP),
 	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP100_UV, 100000, OMAP3630_CONTROL_FUSE_OPP100_VDD1, 0xf9, 0x16, OMAP_ABB_NOMINAL_OPP),
 	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP120_UV, 100000, OMAP3630_CONTROL_FUSE_OPP120_VDD1, 0xfa, 0x23, OMAP_ABB_NOMINAL_OPP),
+<<<<<<< HEAD
 	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP1G_UV, 0,
 OMAP3630_CONTROL_FUSE_OPP1G_VDD1, 0xfa, 0x25, OMAP_ABB_NOMINAL_OPP),
         VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP900_UV, 0,
 OMAP3630_CONTROL_FUSE_OPP1G_VDD1, 0xfa, 0x27, OMAP_ABB_FAST_OPP),
+=======
+	VOLT_DATA_DEFINE(OMAP3630_VDD_MPU_OPP1G_UV, 100000, OMAP3630_CONTROL_FUSE_OPP1G_VDD1, 0xfa, 0x27, OMAP_ABB_FAST_OPP),
+>>>>>>> bde3d31... cleaned all cpufreq and voltages
 	// LGE_MOD_E 20121117 subum.choi@lge.com		// MPU H/W Reset patch from deepak
 	VOLT_DATA_DEFINE(0, 0, 0, 0, 0, 0),
 };
@@ -177,8 +181,6 @@ static struct omap_opp_def __initdata omap34xx_opp_def_list[] = {
 static struct omap_opp_def __initdata omap36xx_opp_def_list[] = {
 	/* MPU OPP1 - OPP50 */
 	OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,  300000000, OMAP3630_VDD_MPU_OPP50_UV),
-	/* MPU OPP1 - OPP20 */
-        OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,  200000000, OMAP3630_VDD_MPU_OPP65_UV),
         /* MPU OPP1 - OPP50 */
 	OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,  400000000, OMAP3630_VDD_MPU_OPP50_UV),
 	/* MPU OPP1 - OPP50 */
@@ -193,13 +195,7 @@ static struct omap_opp_def __initdata omap36xx_opp_def_list[] = {
         OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true, 900000000, OMAP3630_VDD_MPU_OPP900_UV),
 	/* MPU OPP4 - OPP-SB */
 	OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,
-				1100000000, OMAP3630_VDD_MPU_OPP1G_UV),
-        /* MPU OPP5 - OPP-SB */
-        OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,
-              1200000000, OMAP3630_VDD_MPU_OPP12G_UV),
-        /* MPU OPP5 - OPP-SB */
-        OPP_INITIALIZER("mpu", "dpll1_ck", "mpu_iva", true,
-              1300000000, OMAP3630_VDD_MPU_OPP13G_UV), 
+				1000000000, OMAP3630_VDD_MPU_OPP1G_UV),
 
 /* S[, 2012.07.02, mannsik.chung@lge.com, Boost L3 clock. (TI patch by deepak.muddegowda@sasken.com) */
 #if 0
